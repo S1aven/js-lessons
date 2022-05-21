@@ -24,6 +24,14 @@ console.log('lesson 2');
 // Task 01
 // Реализовать функцию sum которая суммирует 2 числа следующим образом sum(3)(6) === 9
 
+function sum(arg: number) {
+  return function (arg2: number) {
+    return arg + arg2
+  }
+}
+
+console.log(sum(3)(6))
+
 // Task 02
 // Реализовать функцию makeCounter которая работает следующим образом:
 // const counter = makeCounter();
