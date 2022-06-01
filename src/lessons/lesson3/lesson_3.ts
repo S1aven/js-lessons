@@ -1,5 +1,3 @@
-import {log} from "util";
-
 console.log('lesson 3');
 
 // Event loop
@@ -290,28 +288,47 @@ console.log('lesson 3');
 //     console.log('err', err)
 //   })
 
-console.log("START")
+// console.log("START")
+//
+// let prom = new Promise((resolve, reject) => {
+//   console.log('START PROMISE')
+//   setTimeout((response) => {
+//     console.log("START SET_TIMEOUT")
+//     if (response.httpStatus >= 200 && response.httpStatus < 400) {
+//       resolve(response.data);
+//       console.log('2', prom);
+//     } else {
+//       reject(response.error);
+//     }
+//   }, 2000, {httpStatus: 200, data: {id: '1212'}, error: 'not found'});
+//   console.log('END PROMISE')
+// });
+//
+// console.log('MIDDLE')
+//
+// prom
+//   .then(console.log)
+//
+// console.log('END')
 
-let prom = new Promise((resolve, reject) => {
-  console.log('START PROMISE')
-  setTimeout((response) => {
-    console.log("START SET_TIMEOUT")
-    if (response.httpStatus >= 200 && response.httpStatus < 400) {
-      resolve(response.data);
-      console.log('2', prom);
-    } else {
-      reject(response.error);
-    }
-  }, 2000, {httpStatus: 200, data: {id: '1212'}, error: 'not found'});
-  console.log('END PROMISE')
-});
+// Promise.resolve(101)
+//   .then(console.log)
 
-console.log('MIDDLE')
-
-prom
-  .then(console.log)
-
-console.log('END')
+// console.log('start')
+// async function f() { // f = async() => {} Два вида объявления асинхронных фкнкций. Возвращает promise
+//   try {
+//     console.log('start f')
+//     const response = await new Promise((res, rej) => {
+//       rej()
+//     })
+//
+//     console.log('middle')
+//   } catch (e) {
+//     console.log('reject')
+//   }
+// }
+// f().catch(console.log);
+// console.log('end')
 
 // just a plug
 export default () => {
